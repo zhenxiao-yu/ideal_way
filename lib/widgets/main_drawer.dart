@@ -10,14 +10,15 @@ class MainDrawer extends StatelessWidget {
         icon,
         size: 26.0,
       ),
-      title: Text(title,),
+      title: Text(
+        title,
+      ),
       onTap: tapHandler,
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    print("EFINOIN");
     return Drawer(
       child: Column(
         children: <Widget>[
@@ -27,10 +28,15 @@ class MainDrawer extends StatelessWidget {
             padding: EdgeInsets.all(20.0),
             alignment: Alignment.centerLeft,
             color: Theme.of(context).accentColor,
-            child: Text(
-              "IDEAL WAY!",
-              style: TextStyle(
-                color: Theme.of(context).primaryColor,
+            child: Container(
+              padding: EdgeInsets.fromLTRB(10, 20, 20, 0),
+              child: Text(
+                "IDEAL WAY!",
+                style: TextStyle(
+                  color: Theme.of(context).primaryColor,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 40.0,
+                ),
               ),
             ),
           ),
@@ -40,12 +46,14 @@ class MainDrawer extends StatelessWidget {
           buildListTile(
             "Awards",
             Icons.cake,
-            () => Navigator.of(context).pushReplacementNamed(AwardsPage.routeName),
+            () => Navigator.of(context)
+                .pushReplacementNamed(AwardsPage.routeName),
           ),
           buildListTile(
             "Home Screen",
             Icons.home,
-            () => Navigator.of(context).pushReplacementNamed(HomeScreen.routeName),
+            () => Navigator.of(context)
+                .pushReplacementNamed(HomeScreen.routeName),
           ),
         ],
       ),

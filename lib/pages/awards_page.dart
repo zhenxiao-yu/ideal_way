@@ -10,7 +10,7 @@ class AwardsPage extends StatefulWidget {
 }
 
 class _AwardsPageState extends State<AwardsPage> {
-  Widget awardTile() {
+  Widget awardTitle() {
     return ListTile();
   } //consider using methods to make code look cleaner
 
@@ -21,8 +21,7 @@ class _AwardsPageState extends State<AwardsPage> {
   @override
   Widget build(BuildContext context) {
     //could use to scale? double width = MediaQuery.of(context).size.width;
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         drawer: MainDrawer(),
         backgroundColor: Theme.of(context).backgroundColor,
         appBar: AppBar(
@@ -95,7 +94,6 @@ class _AwardsPageState extends State<AwardsPage> {
             ],
           ),
         ),
-      ),
     );
   }
 }
